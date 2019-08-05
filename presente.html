@@ -14,7 +14,7 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
-	<body>
+	<body style="background-color:#d85154">
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
@@ -47,33 +47,43 @@
         <!-- CHANGE TEXT --> <!-- CHANGE TEXT --><!-- CHANGE TEXT --><!-- CHANGE TEXT --><!-- CHANGE TEXT --><!-- CHANGE TEXT --><!-- CHANGE TEXT --><!-- CHANGE TEXT --><!-- CHANGE TEXT --><!-- CHANGE TEXT --><!-- CHANGE TEXT --><!-- CHANGE TEXT --><!-- CHANGE TEXT --><!-- CHANGE TEXT --><!-- CHANGE TEXT --><!-- CHANGE TEXT --><!-- CHANGE TEXT --><!-- CHANGE TEXT --><!-- CHANGE TEXT --><!-- CHANGE TEXT --><!-- CHANGE TEXT -->
         
         <div id="one" style="background-color:#d85154">
-        <center>        <h2>a nossa lua de mel</h2>
+        <center>
+		<header class="major"> <h2> presentes </h2> </header>
 
                 <section>
                     <div class="box alt">
                         <p> </p>
-                        Para nos oferecer este presente, selecione a parcela, deixe-nos uma mensagem <br>
-                            e transfira o valor para a conta: PT50 0000 0000 0000 0000 0000 0
+                        <span style="font-size:16px"> Para nos oferecerem este presente, por inteiro ou em parte, basta selecionar o item escolhido, deixarem-nos uma mensagem <br>
+                            para que vos possamos agradecer mais tarde, fazer uma transfer&ecirc;ncia para o IBAN |PT50 0023 0000 4552 8302 7639 4| <br> e na descri&ccedil;&atilde;o da transfer&ecirc;ncia colocar o nome e o presente. </span>
                         <p> </p>
-                        <p> Muito obrigada! </p>                                
+                        
+                        <p> <span style="font-size:18px"> Muito obrigada! </span> </p>
+                        
                         <form id="test-form">
                             <p> Presente </p>
                                 <div>
-                                    <select name="demo-category" id="demo-category" style="color:#16c1b3">
+                                    <select name="demo-category" id="demo-category" style="color:#16c1b3" onchange="changePresente()">
                                         <option value="1" style="color:#16c1b3"> Arm&aacute;rio </option>
-                                        <option value="2" style="color:#16c1b3"> Cama de casal </option>
-                                        <option value="3" style="color:#16c1b3"> Candeeiro de cozinha </option>
-                                        <option value="4" style="color:#16c1b3"> Candeeiro de sala </option>
-                                        <option value="5" style="color:#16c1b3"> Espelho </option>
-                                        <option value="6" style="color:#16c1b3"> Grelhador </option>
-                                        <option value="7" style="color:#16c1b3"> Mesa </option>
-                                        <option value="8" style="color:#16c1b3"> Mesa de apoio </option>
-                                        <option value="9" style="color:#16c1b3"> Mesa de jardim </option>
-                                        <option value="10" style="color:#16c1b3"> Sof&aacute; </option>
-                                        <option value="11" style="color:#16c1b3"> Tapete   </option>
+                                        <option value="2" style="color:#16c1b3"> Cabeceira </option>
+                                        <option value="3" style="color:#16c1b3"> Cama de casal </option>
+                                        <option value="4" style="color:#16c1b3"> Candeeiro de cozinha </option>
+                                        <option value="5" style="color:#16c1b3"> Consola </option>
+                                        <option value="6" style="color:#16c1b3"> Espelho </option>
+                                        <option value="7" style="color:#16c1b3"> Grelhador </option>
+                                        <option value="8" style="color:#16c1b3"> Mesa de Apoio</option>
+                                        <option value="9" style="color:#16c1b3"> Mesa de Cabeceira </option>
+                                        <option value="10" style="color:#16c1b3"> Mesa de Exterior </option>
+                                        <option value="11" style="color:#16c1b3"> Sof&aacute; </option>
                                         <option value="12" style="color:#16c1b3"> Televis&atilde;o </option>
                                     </select>
                                 </div>
+                                <input type="hidden" id="txtPst" name="Presente" value="Arm&aacute;rio"/>
+                            <script>
+                                function changePresente() {
+                                    var elt = document.getElementById("demo-category");
+                                    document.getElementById("txtPst").value = elt.options[elt.selectedIndex].text;
+                                }
+                            </script>
                             <p> </p>
                             <p> Nome</p>
                             <input type="text" id="txtName" name="NomeCompleto" size="40"/>
@@ -105,7 +115,7 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
             <script src="assets/js/jquery.serialize-object.js"></script>
-            <script src="assets/js/scriptinho.js"></script>
+            <script src="assets/js/presente.js"></script>
 
 	</body>
 </html>
