@@ -67,7 +67,12 @@ colors #b2393c #21b2a6
                                     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
                                   // Display the result in the element with id="demo"
-                                  document.getElementById("demo").innerHTML = days + " dias " + hours + ":" + minutes + ":" + seconds;
+                                    if (distance < 0) {
+                                        document.getElementById("demo").innerHTML = 0 + " dias " + 0 + ":" + 0 + ":" + 0;
+                                    } else {
+                                        document.getElementById("demo").innerHTML = days + " dias " + hours + ":" + minutes + ":" + seconds;
+                                    }
+
 
                                   }, 1000);
                             </script>
